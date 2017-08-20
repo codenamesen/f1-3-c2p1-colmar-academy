@@ -1,0 +1,978 @@
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans Regular'), local('OpenSans-Regular'), url(https://fonts.gstatic.com/s/opensans/v14/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v14/k3k702ZOKiLJc3WVjuplzOgdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Pavanam';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pavanam'), local('Pavanam-Regular'), url(https://fonts.gstatic.com/s/pavanam/v1/6r4mpSMUudqN238yU-v4jA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Montserrat Light'), local('Montserrat-Light'), url(https://fonts.gstatic.com/s/montserrat/v10/IVeH6A3MiFyaSEiudUMXE8u2Q0OS-KeTAWjgkS85mDg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat Regular'), local('Montserrat-Regular'), url(https://fonts.gstatic.com/s/montserrat/v10/zhcz-_WihjSQC0oHJ9TCYPk_vArhqVIZ0nv9q090hN8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'), url(https://fonts.gstatic.com/s/montserrat/v10/q2OIMsAtXEkOulLQVdSl06VlZKEoJGujTpfWnQT9bUY.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Montserrat Bold'), local('Montserrat-Bold'), url(https://fonts.gstatic.com/s/montserrat/v10/IQHow_FEYlDC4Gzy_m8fcoWiMMZ7xLd792ULpGE4W_Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+
+/*____________Default font-size, line-height and font-family_____________*/
+
+html{
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: hsl(0, 0%, 34%);
+}
+
+/*____________________For common properties____________________*/
+.center{
+  text-align: center;
+}
+
+.left{
+  max-width: 60%;
+  /*border: 1px solid red;*/
+}
+
+.right{
+  max-width: 40%;
+  /*border: 1px solid red;*/
+}
+
+h1{
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: hsl(0, 1%, 14%);
+}
+
+h2{
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: hsl(0, 1%, 14%);
+}
+
+h4{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: hsl(0, 1%, 14%);
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+/*__________header containing the logo and the menus___________________*/
+header{
+  padding: 1rem 1.5rem;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  background-color: hsl(222, 100%, 87%);
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+header .content{
+  display: flex;
+  align-items: center;
+  /*border: 1px solid green;*/
+}
+
+header .content .logo{
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  /*border: 1px solid red;*/
+}
+
+header .logo img{
+  height: 2rem;
+  width: auto;
+}
+
+header .logo p{
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  color: hsla(0, 0%, 0%, 0.5);
+  /*border: 1px solid red;*/
+}
+
+header .logo .bold{
+  font-weight: bold;
+  color: hsl(0, 0%, 0%);
+}
+
+/*_______For styling the links in the header________*/
+header .content nav ul{
+  display: flex;
+  align-items: center;
+  /*border: 1px solid red;*/
+}
+
+header .content nav li{
+  margin-left: 1rem;
+}
+
+/*This styles and animates the links in the header*/
+header .content nav li a{
+  font-family: "Pavanam", sans-serif;
+  font-size: 1.2rem;
+  color: hsl(0, 0%, 100%);
+  text-decoration: none;
+  background-color: hsl(223, 50%, 71%);
+  padding: 1px 5px;
+  border-radius: 4px;
+  box-shadow: -3px 3px 100px hsl(0, 0%, 61%);
+}
+
+header .content nav ul.desktop li a:hover{
+  text-decoration: none;
+  background-color: hsl(206, 89%, 30%);
+  color: white;
+  padding: 1px 4px;
+  border: 2px solid white;
+  border-radius: 8px;
+}
+
+header .content nav ul.desktop li a{
+  transition: all 200ms ease-in-out;
+}
+/*_______________For screen haveing width more that 747px________________*/
+@media only screen and (min-width:747px){
+  section.third .tiles .tile-group .tile .tiletextbox i{
+    display: none;
+  }
+}
+
+/*_______________For screen haveing width more that 753px________________*/
+@media only screen and (min-width:753px){
+  header .content nav .mobile li{
+    display: none;
+  }
+
+  section.second .right .row .rowimgbox .mobileimg{
+    display: none;
+  }
+}
+
+/*________________For screen having width less than 631px_________________*/
+@media only screen and (max-width: 752px){
+  header .content nav .desktop li{
+    display: none;
+  }
+
+  header .content nav .mobile li{
+    margin-left: 3rem;
+  }
+
+  section.second .right .row .rowimgbox .desktopimg{
+    display: none;
+  }
+
+  /*____This removes the sytle in the header links when screen width is less than 752px____*/
+  header .content nav li a{
+    background-color: hsl(222, 100%, 87%);
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px hsl(222, 100%, 87%);
+  }
+
+}
+
+/*________________For screen having width less than 461px__________________*/
+@media only screen and (max-width: 460px){
+  header .content .logo p{
+    display: none;
+  }
+
+  header .content, header .content nav ul{
+    justify-content: space-around;
+  }
+
+  header .content nav li a{
+    background-color: hsl(222, 100%, 87%);
+    padding: 0px;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px hsl(222, 100%, 87%);
+  }
+
+  header .content nav{
+    width: 100%;
+  }
+}
+
+/*__________________To offset the content for the fixed header_______________*/
+
+.main-content{
+  position: relative;
+  top: 4rem;
+}
+
+/*_____________________Styles for the first Section__________________________*/
+section.top{
+  display: flex;
+}
+
+section.top{
+  background-color: hsl(240, 4%, 85%);
+  /*border: 1px solid red;*/
+}
+
+    /*_________Left Column__________*/
+section.top .left{
+  padding: 2rem 1.5rem;
+  width: 60%;
+  /*border: 1px solid green;*/
+}
+
+section.top .imgbox{
+  width: 100%;
+  height: auto;
+}
+
+section.top .left .content{
+  /*border: 1px solid red;*/
+}
+
+    /*_________Right Column__________*/
+section.top .right{
+  display: flex;
+  align-items: center;
+  /*border: 1px solid green;*/
+}
+
+section.top .right .content{
+  width: 67%;
+  /*border: 1px solid red;*/
+}
+
+section.top .right .content h1{
+  line-height: 1.2;
+}
+
+section.top .right .content p{
+  margin: 1.5rem 0rem;
+}
+
+
+section.top .right .content p{
+  font-size: 1.4rem;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+/*__________Styles the button and creates a shadow and a clickable effect______________*/
+section.top .right .button{
+  padding: .5rem 0rem;
+  font-size: 1.3rem;
+  color: hsl(360, 100%, 100%);
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px hsl(0, 0%, 21%);
+  background-color: hsl(221, 40%, 36%);
+  border-radius: 5px;
+}
+
+section.top .right .button a{
+  text-decoration: none;
+  color: white;
+}
+
+section.top .right .button:hover{
+  background-color: hsl(206, 89%, 30%);
+}
+
+section.top .right .button:active{
+  background-color: hsl(206, 89%, 30%);
+  box-shadow: -0.5px -0.5px 0px hsl(0, 0%, 21%);
+}
+
+section.top .right .button{
+  transition: all 200ms ease-out;
+}
+
+
+
+/*____________________This styles the top section when screen width is between 747px and 1034px____________________*/
+@media only screen and (min-width:747px) and (max-width:1034px){
+  section.top{
+    position: relative;
+  }
+
+  section.top .left{
+    min-width: 100%;
+    box-sizing: border-box;
+    /*border: 1px solid purple;*/
+  }
+
+  section.top .right{
+    width: 0px;
+    padding: 0rem 0rem 4rem 0rem;
+    align-items: flex-end;
+    /*border: 1px solid red;*/
+  }
+
+  Section.top .right .content{
+    position: absolute;
+    left: 4rem;
+    width: 40%;
+    /*border: 1px solid red;*/
+    /*background-color: hsla(217, 47%, 36%, 0.59);*/
+  }
+
+  Section.top .right .content h1{
+    color: hsla(0, 0%, 100%, 1);
+    background-color: hsla(205, 96%, 59%, 1);
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  section.top .right .content p{
+    display: none;
+  }
+
+  /*This changes the shadow color of the button when in tab mode.*/
+  section.top .right .button{
+    box-shadow: 5px 5px 20px hsl(0, 0%, 70%);
+  }
+}
+
+/*_____________________This styles the top section when screen widthe is less than 746px__________________*/
+@media only screen and (max-width:746px){
+  section.top{
+    display: block;
+    /*flex-direction: column;*/
+    /*border: 1px solid red;*/
+  }
+
+  section.top .left{
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  section.top .right{
+    min-width: 100%;
+    padding: 2rem 1rem 2rem 1rem;
+    box-sizing: border-box;
+    justify-content: center;
+    /*border: 1px solid red;*/
+  }
+
+  section.top .right .content{
+    width: 64%;
+    text-align: center;
+    /*border: 1px solid blue;*/
+  }
+}
+
+/*_____________________This styles the top section when the screen width is less than 460px____________________*/
+@media only screen and (max-width:460px){
+  section.top .right{
+    justify-content: flex-start;
+    box-sizing: border-box;
+    /*border: 1px solid red;*/
+  }
+
+  section.top .right .content{
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/*__________________Styles the first section below the top___________________*/
+section.second{
+  display: flex;
+  /*border: 1px solid red;*/
+}
+    /*_________Styles the left part___________*/
+section.second .left{
+  width: 60%;
+  padding: 2rem 1.5rem;
+  /*border: 1px solid blue;*/
+}
+
+section.second .left .content img{
+  /*width: 100%;
+  height: auto;*/
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+section.second .left h1{
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+
+section.second .left p{
+  margin: 1.5rem 0rem 0rem 0rem;
+  line-height: 1.5;
+  /*border: 1px solid red*/
+}
+
+section.second .left p.hiring{
+  font-size: 0.9rem;
+  font-weight:  600;
+}
+
+    /*_____________Styles the right part of the section just below the first______________*/
+section.second .right{
+  border-left: 1px solid gray;
+  padding: 1rem 0rem 2rem 0rem;
+  /*border: 1px solid blue;*/
+}
+
+section.second .right .row{
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  /*border: 1px solid brown;*/
+}
+
+section.second .right .row .rowimgbox{
+  width: 35%;
+  margin: 1rem;
+}
+
+section.second .right .row .rowimgbox img{
+  width: 100%;
+  height: auto;
+  /*border: 2px solid red;*/
+}
+
+section.second .right .row .rowtext{
+  width: 65%;
+  /*border: 1px solid red;*/
+}
+
+section.second .right .row .rowtext p{
+  margin: .5rem 0rem;
+  line-height: 1.5;
+}
+
+section.second .right .row .rowtext a{
+  text-decoration: none;
+  background-color: hsl(221, 27%, 40%);
+  color: hsla(0, 0%, 100%, 1);
+  padding: 4px;
+  border: 2px solid #969696;
+  border-radius: 5px;
+}
+
+#secondsectionbottomrow{
+  background-color: hsla(332, 0%, 61%, 0.5);
+}
+
+/*____________________For screen size between 753px and 1034px the changes in the second sction are_____________________*/
+@media only screen and (min-width:747px) and (max-width:1034px){
+  section.second{
+    position: relative;
+    /*border: 1px solid green;*/
+  }
+
+  section.second .left{
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  section.second .right{
+    border-left: none;
+    position: absolute;
+    padding: 0rem;
+    top: 2rem;
+    left: 1.5rem;
+    /*border: 1px solid red;*/
+  }
+
+  section.second .right .row{
+    border: none;
+    padding: 1rem 0rem 0rem 1rem;
+  }
+
+
+  section.second .right .row .rowimgbox{
+    margin: 0rem 0.5rem 0rem 0rem;
+    border: 1px solid #5393a2;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px hsl(0, 0%, 15%);
+  }
+
+  section.second .right .row .rowtext p, section.second .right .row .rowtext a{
+    display: none;
+  }
+
+  section.second .right .row h4{
+    display: inline;
+    padding: .5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: hsl(192, 55%, 59%);
+    line-height: 1.5;
+    border-radius: 5px;
+    box-shadow: 10px 10px 55px hsl(0, 0%, 15%);
+  }
+
+  #secondsectionbottomrow{
+    background-color: hsla(0, 0%, 100%, 0);
+  }
+}
+
+@media only screen and (max-width:746px){
+  section.second .left{
+    display: none;
+  }
+
+  section.second .right{
+    box-sizing: border-box;
+    border: none;
+    min-width: 100%;
+    padding: 1rem;
+    /*border: 1px solid red;*/
+  }
+
+  section.second .right .row{
+    flex-direction: column;
+    box-sizing: border-box;
+    border: none;
+    /*border: 1px solid red;*/
+  }
+
+  section.second .right .row .rowimgbox{
+    min-width: 100%;
+    height: auto;
+    margin: 0px;
+    /*border: 1px solid red;*/
+  }
+
+  section.second .right .row .rowtext{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    /*border: 1px solid red;*/
+  }
+
+  #secondsectionbottomrow{
+    background-color: hsl(0, 0%, 100%);
+  }
+}
+
+/*___________________This styles the third section of the page__________________________*/
+section.third{
+  padding: 2rem 4.5rem;
+  background-color: hsla(0, 0%, 92%, 1);
+  /*border: 1px solid red;*/
+}
+
+/*___________________This styles the main heading in the third section/the courses section_________________*/
+section.third h2{
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+/*_______________This styles the container .tiles that contain all the courses with images________________*/
+section.third .tiles{
+  background-color: hsla(0, 0%, 92%, 1);
+}
+
+/*______________This styles the container containing both the rows for tiles(course img & details)______________*/
+section.third .tiles .tile-group{
+  display: flex;
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+/*__________________This styles each of the course and its image________________*/
+section.third .tiles .tile-group .tile{
+  background-color: hsl(0, 0%, 100%);
+}
+
+section.third .tiles .tile-group .tile{
+  box-sizing: border-box;
+  width: 33%;
+  opacity: 0.5;
+  /*border: 1px solid green;*/
+}
+
+section.third .tiles .tile-group .tile .tileimgbox{
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  /*border: 1px solid red;*/
+}
+
+section.third .tiles .tile-group .tile .tiletextbox{
+  box-sizing: border-box;
+  padding: 0.5rem 1rem 1rem 1rem;
+  /*border: 1px solid red;*/
+}
+
+/*___________For setting the marging between the paragraphs and heading, below image of courses__________*/
+section.third .tiles .tile-group .tile .tiletextbox h4, section.third .tiles .tile-group .tile .tiletextbox p{
+  box-sizing: border-box;
+  margin: 1rem 0rem;
+  /*border: 1px solid red;*/
+}
+
+section.third .tiles .tile-group .tile .tiletextbox p{
+  line-height: 1.5;
+}
+
+/*____________This puts left and right marging to the middle course in both the row_____________*/
+section.third .tiles .tile-group .coursemiddle{
+  margin: 0rem 2rem;
+  /*border: 1px solid red;*/
+}
+
+
+section.third .tiles .tile-group .tile:hover{
+  opacity: 1;
+  box-shadow: 10px 10px 20px hsl(0, 0%, 21%);
+}
+
+section.third .tiles .tile-group .tile{
+  transition: all 500ms ease-in-out;
+}
+
+
+/*_______________This styles the third secion when the screen width is between 747px and 1034px______________*/
+@media only screen and (min-width:747px) and (max-width:1034px){
+  section.third .tiles{
+    display: flex;
+    /*border: 1px solid blue;*/
+  }
+
+  section.third .tiles .tile-group{
+    box-sizing: border-box;
+    display: block;
+    margin: 0rem;
+    padding: 0rem;
+    width: 50%;
+    /*border: 1px solid red;*/
+  }
+
+  section.third .tiles .tile-group .tile{
+  box-sizing: border-box;
+  margin: 0rem;
+  width: 100%;
+  /*border: 1px solid red;*/
+  }
+
+  section.third .tiles .tile-group{
+    margin: 0rem 1rem 0rem 1rem;
+  }
+
+  section.third .tiles .tile-group .coursemiddle{
+    margin: 2rem 0rem;
+  }
+
+  section.third .tiles .tile-group .tile .tiletextbox .coursedetails{
+    display: none;
+  }
+}
+
+/*_________________This styles the third section when the screen width is less than 746px__________________*/
+@media only screen and (max-width: 746px){
+  section.third .tiles .tile-group{
+    display: block;
+  }
+
+  section.third .tiles .tile-group{
+    margin: 0rem;
+    /*border: 1px solid red;*/
+  }
+
+  section.third .tiles .tile-group .tile{
+    margin: 0.25rem 0rem;
+    width: 100%;
+    /*border: 1px solid green;*/
+  }
+
+  section.third .tiles .tile-group .tile{
+    background-color: hsl(0, 0%, 66%);
+  }
+
+  section.third .tiles .tile-group .tile .tileimgbox, section.third .tiles .tile-group .tile .tiletextbox p, section.third .tiles .tile-group .tile .tiletextbox .coursedetails{
+    display: none;
+  }
+}
+
+  /*For keepin the fa-graduation-cap icon in the same row and the icon only gets displayed at screen size less than 747px */
+@media only screen and (max-width: 746px){
+  section.third .tiles .tile-group .tile .tiletextbox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  section.third .tiles .tile-group .tile i{
+    color: white;
+    opacity: 0.2;
+  }
+
+  section.third .tiles .tile-group .tile i:hover{
+    opacity: 1;
+  }
+
+  section.third .tiles .tile-group .tile i{
+    transition: all 500ms ease-out;
+  }
+}
+
+/*_______________________This styles the bottom or the last section just above the footer____________________________*/
+section.bottom{
+  padding: 2rem 0rem 2rem 1.5rem;
+}
+
+section.bottom h2{
+  margin: 0rem 0rem 2rem 0rem;
+}
+
+section.bottom .bottomcontent{
+  display: flex;
+}
+/*_____________________________For styling the left coloumn of the bottom most section______________________________*/
+section.bottom .bottomcontent .left{
+  width: 60%;
+  padding: 0rem 1.5rem 0rem 0rem;
+  /*border: 1px solid red;*/
+}
+
+section.bottom .bottomcontent .left .videobox{
+  margin: 0rem 0rem 1.5rem 0rem;
+}
+
+section.bottom .bottomcontent .left .videobox video{
+  width: 100%;
+  height: auto;
+}
+
+section.bottom .bottomcontent .left h4{
+  margin: 0rem 0rem 0.5rem 0rem;
+}
+
+section.bottom .bottomcontent .left p{
+  line-height: 1.5;
+}
+
+section.bottom .bottomcontent .right{
+  width: 40%;
+}
+
+section.bottom .bottomcontent .row{
+  display: flex;
+  align-items: center;
+}
+
+/*_________________________________This is puts background color to the first row_________________________________*/
+#bottomsectiontoprow{
+  background-color: hsl(0, 0%, 89%);
+  /*border: 1px solid red;*/
+}
+
+section.bottom .bottomcontent .right .row .imgbox{
+  width: 35%;
+  margin: 1rem;
+  /*border: 1px solid red;*/
+}
+
+section.bottom .bottomcontent .right .row .rowtext{
+  width: 65%;
+  /*border: 1px solid red;*/
+}
+
+section.bottom .bottomcontent .right .row .rowtext h4{
+  line-height: 2.5;
+  /*border: 1px solid red;*/
+}
+
+section.bottom .bottomcontent .right .row .rowtext p{
+  line-height: 1.5;
+}
+
+
+/*_________________This styles the bottom section when the screen width is between 747px and 1034px_____________________*/
+@media only screen and (min-width:747px) and (max-width:1034px){
+  section.bottom{
+    padding: 2rem 0rem 1.5rem 0rem;
+  }
+
+  section.bottom .bottomcontent .left h4{
+    margin: 1.5rem 0rem .5rem 1.5rem;
+  }
+
+  section.bottom .bottomcontent .left p{
+    margin: 0rem 0.5rem 2rem 1.5rem;
+  }
+
+  section.bottom .bottomcontent{
+    position: relative;
+    /*border: 1px solid green;*/
+  }
+
+  section.bottom .bottomcontent .left{
+    box-sizing: border-box;
+    min-width: 100%;
+    padding: 0rem;
+    margin: 0rem;
+  }
+
+  section.bottom .bottomcontent .left .videobox{
+    margin: 0rem;
+  }
+
+  section.bottom .bottomcontent .left .videobox:hover{
+
+  }
+
+  #bottomsectiontoprow{
+    background-color: hsla(0, 0%, 100%, 0);
+    /*border: 1px solid red;*/
+  }
+
+  section.bottom .bottomcontent .right{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: .5rem .5rem 0rem .5rem;
+    min-width: 100%;
+    height: 35%;
+    /*border: 2px solid brown;*/
+  }
+
+  section.bottom .bottomcontent .right .row{
+    display: block;
+    width: 15%;
+    /*border: 1px solid red;*/
+  }
+
+  section.bottom .bottomcontent .right .row .imgbox{
+    width: 100%;
+    margin: 0rem 0rem 0.2rem 0rem;
+    border: 2px solid #5db8d1;
+    box-shadow: 10px 10px 10px hsl(0, 0%, 9%);
+  }
+
+  #bottom-most-rightimg{
+    box-shadow: -10px 10px 10px hsl(0, 0%, 9%);
+  }
+
+
+  section.bottom .bottomcontent .right .row .rowtext{
+    width: 100%;
+    border: 2px solid #5db8d1;
+  }
+
+  section.bottom .bottomcontent .right .row .rowtext h4{
+    padding: 0.3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    background-color:hsl(192, 55%, 59%);
+    color: black;
+  }
+
+  section.bottom .bottomcontent .right .row .rowtext p{
+    display: none;
+  }
+}
+
+/*_________________This styles the bottom content when screen width is less then 746px___________________*/
+@media only screen and (max-width: 746px){
+  section.bottom .bottomcontent .left h4, section.bottom .bottomcontent .left p{
+    display: none;
+  }
+
+  section.bottom .bottomcontent .right{
+    display: none;
+  }
+
+  section.bottom{
+    padding: 2rem 0rem 0rem 0rem;
+  }
+
+  section.bottom .bottomcontent .left{
+    min-width: 100%;
+    padding: 0rem;
+  }
+}
+
+/*____________________This styles the footer____________________________*/
+footer{
+  display: flex;
+  background-color: hsl(221, 40%, 36%);
+  color: white;
+}
+
+footer{
+  height: 4rem;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid gray;
+}
+
+footer .copy{
+  flex-grow: 1;
+}
+
+footer nav ul, footer nav ul li{
+  display: inline-block;
+}
+
+footer nav ul.mobile{
+  margin-left: 2rem;
+}
+
+footer nav ul li a{
+  text-decoration: none;
+  margin: 0rem 0rem 0rem .5rem;
+  color: white;
+}
+
+/*_____________This Styles the responsive code for the footer__________________*/
+@media only screen and (max-width:670px) {
+  footer{
+    height: auto;
+  }
+
+  footer .copy{
+    font-size: 0.85rem;
+  }
+
+  footer nav ul.mobile{
+    display: none;
+  }
+}
